@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> xep hang hoc sinh </h1>
+<p>nhap diem kiem tra: </p>
+<input id="A" type="text"><br>
+<p>nhap diem giua ki:</p>
+<input id="B" type="text">
+<p>nhap diem cuoi ky:</p>
+<input id="C" type="text">
+<button id="kiemtra" onclick="xepHang()">xep hang</button>
+<h2>Xep hạng hoc luc:</h2>
+<p id="diem"></p>
+<p id="XepHang"></p>
+<script>
+    function xepHang() {
+        let a = +document.getElementById('A').value;
+        let b = +document.getElementById('B').value;
+        let c = +document.getElementById('C').value;
+        let tb = (a + b + c) / 3;
+        document.getElementById('diem').innerHTML = tb
+        if (tb >= 8) {
+            document.getElementById('XepHang').innerHTML = ' Hoc sinh gioi'
+        }
+
+         else if (tb >= 5 && tb <8) {
+             document.getElementById('XepHang').innerHTML = 'Hoc sinh trung binh '
+            }
+            else {
+                    document.getElementById('XepHang').innerHTML = 'Hoc sinh chua tot'
+               }
+
+
+    }
+</script>
+
+
+</body>
+</html>

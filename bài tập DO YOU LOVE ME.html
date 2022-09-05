@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align: center">DO YOU LOVE ME</h1>
+<div class="viTri">
+  <input id="yes" onclick="ketQuaYes()" style="text-align: center" type="button" value="YES">
+  <input id="no" onmouseover="ketQuaNo()" style="position: absolute; align-items:center" type="button" value="NO">
+</div>
+<script>
+  function ketQuaYes() {
+    document.write("TYM TYM!!!!")
+  }
+
+  function ketQuaNo() {
+    let no = document.getElementById("no");
+    no.style.left = Math.round(Math.random() * window.innerHeight) + 'px';
+    no.style.right = Math.round(Math.random() * window.innerWidth) + 'px';
+  }
+</script>
+</body>
+</html>
